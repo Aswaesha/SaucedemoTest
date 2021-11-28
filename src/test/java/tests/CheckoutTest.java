@@ -2,7 +2,7 @@ package tests;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
+                           // НИ ОДИН ТЕСТ НЕ СРАБАТЫВАЕТ, Я НЕ МОГУ ПОНЯТЬ ЧТО Я ТАК ДЕЛАЮ
 public class CheckoutTest  extends BaseTest{
     @Test
     public void checkoutIsDisplay(){
