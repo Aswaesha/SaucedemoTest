@@ -12,6 +12,9 @@ public class CheckoutPage extends BasePage {
     public static final By POSTAL_CODE_INPUT = By.id("postal-code");
     public static final By CONTINUE_BUTTON = By.id("continue");
     public static final By CANCEL_BUTTON = By.id("cancel");
+    public static final By ERROR_MASSAGE = By.xpath("//h3[@data-test='error']");
+
+
 
     public CheckoutPage(WebDriver driver) {
         super(driver);
@@ -23,5 +26,13 @@ public class CheckoutPage extends BasePage {
         driver.findElement(POSTAL_CODE_INPUT).sendKeys(postalCode);
         driver.findElement(CONTINUE_BUTTON).click();
         driver.findElement(CANCEL_BUTTON).click();
+    }
+    public void checkoutContinueButtonClick(){
+        driver.findElement(CONTINUE_BUTTON).click();
+    }
+
+    public String getErrorMassageCheckout(){
+
+        return driver.findElement(ERROR_MASSAGE).getText();
     }
 }
