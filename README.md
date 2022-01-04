@@ -57,10 +57,10 @@
         Проверить наличие img
         При клике на кнопку beck home происходит переход на главную страницу
 
-##**MAVEN**
-#### Доступные обновления версий  **mvn versions:display-dependency-updates**
-[INFO] The following dependencies in Dependencies have newer versions:
-[INFO]   io.github.bonigarcia:webdrivermanager ................. 5.0.0 -> 5.0.3
+## **MAVEN**
+#### Доступные обновления версий  _mvn versions:display-dependency-updates_
+> [INFO] The following dependencies in Dependencies have newer versions: /n
+[INFO]   io.github.bonigarcia:webdrivermanager ................. 5.0.0 -> 5.0.3 n/
 [INFO]   io.qameta.allure:allure-testng ...................... 2.13.9 -> 2.17.2
 [INFO]   org.aspectj:aspectjweaver ......................... 1.9.6 -> 1.9.8.RC3
 [INFO]   org.seleniumhq.selenium:selenium-java .............. 3.141.59 -> 4.1.1
