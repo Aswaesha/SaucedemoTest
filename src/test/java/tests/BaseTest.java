@@ -6,19 +6,20 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Listeners;
 import pages.*;
 
 import java.util.concurrent.TimeUnit;
 
 public class BaseTest {
 
-    WebDriver driver;
-    LoginPage loginPage;
-    InventoryPage inventoryPage;
-    TitlePage titlePage;
-    CheckoutPage checkoutPage;
-    CartPage cartPage;
-    CheckoutTwoPage checkoutTwoPage;
+    protected WebDriver driver;
+    protected LoginPage loginPage;
+    protected InventoryPage inventoryPage;
+    protected TitlePage titlePage;
+    protected CheckoutPage checkoutPage;
+    protected CartPage cartPage;
+    protected CheckoutTwoPage checkoutTwoPage;
 
     @BeforeMethod
     public void setUp() {
@@ -26,20 +27,20 @@ public class BaseTest {
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--start-maximized");
         driver = new ChromeDriver(options);
-        driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 
-        loginPage= new LoginPage(driver);
+        loginPage = new LoginPage(driver);
         inventoryPage = new InventoryPage(driver);
         titlePage = new TitlePage(driver);
         checkoutPage = new CheckoutPage(driver);
-        checkoutPage = new CheckoutPage(driver);
+        cartPage = new CartPage(driver);
         checkoutTwoPage = new CheckoutTwoPage(driver);
 
     }
 
-//    @AfterMethod(alwaysRun = true)
-//    public void tearDown() {
-//        driver.quit();
-//    }
+    @AfterMethod(alwaysRun = true)
+    public void tearDown() {
+        driver.quit();
+    }
 
 }
