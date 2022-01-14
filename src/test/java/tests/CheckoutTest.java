@@ -28,7 +28,6 @@ public class CheckoutTest extends BaseTest {
         checkoutPage.checkOut("", "Petrov", "246056");
         checkoutPage.checkoutContinueButtonClick();
         Assert.assertEquals(checkoutPage.getErrorMassageCheckout(), "Error: First Name is required", "Сообщение об ощибке неверно");
-
     }
 
     @Test(description = "Check error massage without postal code")
