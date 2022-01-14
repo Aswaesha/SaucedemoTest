@@ -1,4 +1,4 @@
-import org.openqa.selenium.By;
+/*import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
@@ -82,3 +82,4 @@ public class LocatorTest extends BaseTest {
         WebElement linksWithLattice = driver.findElement(By.cssSelector("a[href *= #]"));
     }
 }
+*/
