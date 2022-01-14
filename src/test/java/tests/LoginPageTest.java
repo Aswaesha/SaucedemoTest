@@ -1,16 +1,26 @@
 package tests;
 
+//import io.qameta.allure.Step;
 import org.testng.Assert;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
+//import tests.base.BaseTest;
+//import tests.base.Retry;
+
 public class LoginPageTest extends BaseTest {
 
-    @Test()
+
+
+
+
     public void addToCard() {
         driver.get("https://www.saucedemo.com/");
         loginPage.open();
         loginPage.login("standard_user","secret_sauce");
 
     }
+
+
 
     @Test
     public void userPasswordShouldBeRequired () {

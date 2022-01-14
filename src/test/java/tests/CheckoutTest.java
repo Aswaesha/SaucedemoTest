@@ -15,8 +15,7 @@ public class CheckoutTest extends BaseTest {
 
         checkoutPage.checkOut("Alex", "Petrov", "246056");
         Assert.assertEquals(checkoutTwoPage.checkoutTwoButtonFinish(), true, "Вы не вошли на страницу");
-
-    }
+}
 
     @Test(description = "Check error massage without first name")
     public void checkoutNotDisplayWithoutFirstName() {
