@@ -21,13 +21,11 @@ public class LoginPageTest extends BaseTest {
     }
 
 
-
     @Test
     public void userPasswordShouldBeRequired () {
         loginPage.open();
         loginPage.login("standard_user","");
         Assert.assertEquals(loginPage.getErrorMassage(),"Epic sadface: Password is required","Сообщение об ошибке не верно");
-
     }
     @Test
     public void userNameShouldBeRequired () {
