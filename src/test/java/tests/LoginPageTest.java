@@ -20,6 +20,7 @@ public class LoginPageTest extends BaseTest {
 
     }
 
+
     @Test
     public void userPasswordShouldBeRequired () {
         loginPage.open();
