@@ -9,10 +9,6 @@ import org.testng.annotations.Test;
 
 public class LoginPageTest extends BaseTest {
 
-
-
-
-
     public void addToCard() {
         driver.get("https://www.saucedemo.com/");
         loginPage.open();
